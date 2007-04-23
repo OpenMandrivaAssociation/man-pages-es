@@ -3,8 +3,8 @@
 
 Summary: Spanish man (manual) pages from the Linux Documentation Project.
 Name: man-pages-%LANG
-Version: 1.28
-Release: 6mdk
+Version: 1.55
+Release: %mkrel 1
 License: LDP GENERAL PUBLIC LICENSE
 Group: System/Internationalization
 Source: http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-%{version}.tar.bz2  
@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%_mandir/%LANG/man{1,2,3,4,5,6,7,8,9,n}
 mkdir -p $RPM_BUILD_ROOT/var/catman/%LANG/cat{1,2,3,4,5,6,7,8,9,n}
 
-mv man1/{COPYING,README,LEAME} .
+mv man1/{README,LEAME} .
 
 make MANDIR=$RPM_BUILD_ROOT/%_mandir/es allbz
 
