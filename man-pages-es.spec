@@ -9,7 +9,6 @@ License: LDP GENERAL PUBLIC LICENSE
 Group: System/Internationalization
 Source: http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-%{version}.tar.bz2  
 Source1: http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-extra-%{extra_ver}.tar.bz2  
-Icon: books-%LANG.gif
 URL: http://www.ditec.um.es/~piernas/manpages-es/
 #URL: http://www.pameli.org/
 Buildroot: %_tmppath/%name-root
