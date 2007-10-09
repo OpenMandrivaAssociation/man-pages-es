@@ -1,7 +1,7 @@
 %define LANG es
 %define extra_ver 0.8a
 
-Summary: Spanish man (manual) pages from the Linux Documentation Project.
+Summary: Spanish man (manual) pages from the Linux Documentation Project
 Name: man-pages-%LANG
 Version: 1.55
 Release: %mkrel 1
