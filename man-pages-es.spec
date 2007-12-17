@@ -11,7 +11,6 @@ Source: http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-%{version}.tar.
 Source1: http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-extra-%{extra_ver}.tar.bz2  
 URL: http://www.ditec.um.es/~piernas/manpages-es/
 #URL: http://www.pameli.org/
-Buildroot: %_tmppath/%name-root
 BuildRequires: man => 1.5j-8mdk
 Requires: locales-%LANG, man => 1.5j-8mdk
 Prereq: sed grep man
