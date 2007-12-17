@@ -13,7 +13,7 @@ URL: http://www.ditec.um.es/~piernas/manpages-es/
 #URL: http://www.pameli.org/
 BuildRequires: man => 1.5j-8mdk
 Requires: locales-%LANG, man => 1.5j-8mdk
-Prereq: sed grep man
+Requires(post,preun): sed grep man
 Autoreq: false
 BuildArch: noarch
 Obsoletes: man-%LANG, manpages-%LANG
