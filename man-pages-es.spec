@@ -4,7 +4,7 @@
 Summary: Spanish man (manual) pages from the Linux Documentation Project
 Name: man-pages-%LANG
 Version: 1.55
-Release: %mkrel 2
+Release: %mkrel 3
 License: LDP GENERAL PUBLIC LICENSE
 Group: System/Internationalization
 Source: http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-%{version}.tar.bz2  
