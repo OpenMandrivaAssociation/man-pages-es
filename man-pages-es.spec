@@ -94,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir /var/cache/man/%LANG
 %ghost %config(noreplace) /var/cache/man/%LANG/whatis
 %_mandir/%LANG/man*
+%_mandir/%LANG/whatis
 %attr(755,root,man)/var/catman/%LANG
 %config(noreplace) %attr(755,root,root)/etc/cron.weekly/makewhatis-%LANG.cron
 
