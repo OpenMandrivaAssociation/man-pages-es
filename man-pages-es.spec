@@ -39,7 +39,8 @@ organized into the following sections:
 
 
 %prep
-%setup -n man-pages-%LNG-%{version} -a1
+%setup -q -a1
+
 %build
 
 
