@@ -54,20 +54,8 @@ make MANDIR=%{buildroot}/%_mandir/es allbz
 
 make -C man-pages-es-extra-%{extra_ver} MANDIR=%{buildroot}/%_mandir/es allbz
 
-LANG=%LNG DESTDIR=%{buildroot} %{_sbindir}/makewhatis %{buildroot}/%_mandir/%LNG
-
-mkdir -p %{buildroot}%{_sysconfdir}/cron.weekly
-cat > %{buildroot}%{_sysconfdir}/cron.weekly/makewhatis-%LNG.cron << EOF
-#!/bin/bash
-LANG=%LNG %{_sbindir}/makewhatis %_mandir/%LNG
-exit 0
-EOF
-chmod a+x %{buildroot}%{_sysconfdir}/cron.weekly/makewhatis-%LNG.cron
-
 mkdir -p  %{buildroot}/var/cache/man/%LNG
 rm -f %{buildroot}/usr/share/man/es/{LEEME,LEEME.extra,PAQUETES,PROYECTO}
-
-touch %{buildroot}/var/cache/man/%LNG/whatis
 
 %postun
 # 0 means deleting the package
@@ -79,9 +67,6 @@ if [ "$1" = "0" ]; then
    fi
 fi
 
-%post
-%create_ghostfile /var/cache/man/%LNG/whatis root root 644
-
 %clean
 rm -rf %{buildroot}
 
@@ -92,9 +77,5 @@ rm -rf %{buildroot}
 %doc man-pages-es-extra-%{extra_ver}/PROYECTO
 %dir %_mandir/%LNG
 %dir /var/cache/man/%LNG
-%ghost %config(noreplace) /var/cache/man/%LNG/whatis
 %_mandir/%LNG/man*
-%_mandir/%LNG/whatis
 %attr(755,root,man) /var/catman/%LNG
-%config(noreplace) %attr(755,root,root) %{_sysconfdir}/cron.weekly/makewhatis-%LNG.cron
-
