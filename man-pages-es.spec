@@ -55,7 +55,8 @@ make MANDIR=%{buildroot}/%_mandir/es allbz
 make -C man-pages-es-extra-%{extra_ver} MANDIR=%{buildroot}/%_mandir/es allbz
 
 mkdir -p  %{buildroot}/var/cache/man/%LNG
-rm -f %{buildroot}/usr/share/man/es/{LEEME,LEEME.extra,PAQUETES,PROYECTO}
+rm -f %{buildroot}%{_mandir}/%{LNG}/{LEEME,LEEME.extra,PAQUETES,PROYECTO}
+rm -f %{buildroot}%{_mandir}/%{LNG}/man1/mc.1*
 
 %postun
 # 0 means deleting the package
