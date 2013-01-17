@@ -4,7 +4,7 @@
 Summary: Spanish man (manual) pages from the Linux Documentation Project
 Name: man-pages-%LNG
 Version: 1.55
-Release: %mkrel 8
+Release: 9
 License: LDP GENERAL PUBLIC LICENSE
 Group: System/Internationalization
 Source: http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-%{version}.tar.bz2  
@@ -54,12 +54,12 @@ make MANDIR=%{buildroot}/%_mandir/es allbz
 
 make -C man-pages-es-extra-%{extra_ver} MANDIR=%{buildroot}/%_mandir/es allbz
 
-LANG=%LNG DESTDIR=%{buildroot} %{_sbindir}/makewhatis %{buildroot}/%_mandir/%LNG
+LANG=%LNG DESTDIR=%{buildroot} %{_bindir}/mandb %{buildroot}/%_mandir/%LNG
 
 mkdir -p %{buildroot}%{_sysconfdir}/cron.weekly
 cat > %{buildroot}%{_sysconfdir}/cron.weekly/makewhatis-%LNG.cron << EOF
 #!/bin/bash
-LANG=%LNG %{_sbindir}/makewhatis %_mandir/%LNG
+LANG=%LNG %{_bindir}/mandb %_mandir/%LNG
 exit 0
 EOF
 chmod a+x %{buildroot}%{_sysconfdir}/cron.weekly/makewhatis-%LNG.cron
