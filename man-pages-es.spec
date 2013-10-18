@@ -4,7 +4,7 @@
 Summary:	Spanish man (manual) pages from the Linux Documentation Project
 Name:		man-pages-%{LNG}
 Version:	1.55
-Release:	9
+Release:	10
 License:	LDP GENERAL PUBLIC LICENSE
 Group:		System/Internationalization
 #Url:		http://www.pameli.org/
@@ -49,6 +49,9 @@ make MANDIR=%{buildroot}/%{_mandir}/es allbz
 make -C man-pages-es-extra-%{extra_ver} MANDIR=%{buildroot}/%{_mandir}/es allbz
 
 LANG=%{LNG} DESTDIR=%{buildroot} %{_bindir}/mandb %{buildroot}/%{_mandir}/%{LNG}
+
+# conflicts with mc
+rm %{buildroot}%{_mandir}/es/man1/mc.1*
 
 mkdir -p %{buildroot}%{_sysconfdir}/cron.weekly
 cat > %{buildroot}%{_sysconfdir}/cron.weekly/makewhatis-%{LNG}.cron << EOF
