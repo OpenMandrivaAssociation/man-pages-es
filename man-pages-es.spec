@@ -4,7 +4,7 @@
 Summary:	Spanish man (manual) pages from the Linux Documentation Project
 Name:		man-pages-%{LNG}
 Version:	1.55
-Release:	10
+Release:	11
 License:	LDP GENERAL PUBLIC LICENSE
 Group:		System/Internationalization
 #Url:		http://www.pameli.org/
