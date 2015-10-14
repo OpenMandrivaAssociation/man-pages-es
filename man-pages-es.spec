@@ -4,7 +4,7 @@
 Summary:	Spanish man (manual) pages from the Linux Documentation Project
 Name:		man-pages-%{LNG}
 Version:	1.55
-Release:	19
+Release:	20
 License:	LDP GENERAL PUBLIC LICENSE
 Group:		System/Internationalization
 #Url:		http://www.pameli.org/
@@ -17,6 +17,7 @@ Requires:	locales-%{LNG}
 Requires:	man
 Requires(post,preun):	sed grep man
 Autoreq:	false
+Conflicts:	filesystem < 3.0-17
 
 %description
 A large collection of man pages (reference material) from the Linux 
@@ -81,7 +82,7 @@ fi
 
 %files
 %doc LEEME README man-pages-es-extra-%{extra_ver}/LEEME.extra
-%doc man-pages-es-extra-%{extra_ver}/PAQUETES 
+%doc man-pages-es-extra-%{extra_ver}/PAQUETES
 %doc man-pages-es-extra-%{extra_ver}/PROYECTO
 %dir /var/cache/man/%{LNG}
 %ghost %config(noreplace) /var/cache/man/%{LNG}/whatis
