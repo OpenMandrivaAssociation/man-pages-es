@@ -8,7 +8,7 @@ Release:	22
 License:	LDP GENERAL PUBLIC LICENSE
 Group:		System/Internationalization
 #Url:		http://www.pameli.org/
-Url:		http://www.ditec.um.es/~piernas/manpages-es/
+Url:		https://www.ditec.um.es/~piernas/manpages-es/
 Source0:	http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-%{version}.tar.bz2  
 Source1:	http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-extra-%{extra_ver}.tar.bz2  
 BuildArch:	noarch
