@@ -12,6 +12,7 @@ Url:		https://www.ditec.um.es/~piernas/manpages-es/
 Source0:	http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-%{version}.tar.bz2  
 Source1:	http://www.ditec.um.es/~piernas/manpages-es/man-pages-es-extra-%{extra_ver}.tar.bz2  
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	man
 Requires:	locales-%{LNG}
 Requires:	man
